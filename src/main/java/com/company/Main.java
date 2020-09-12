@@ -14,13 +14,11 @@ public class Main {
             x = scanner.nextDouble();
             System.out.println("enter k: ");
             k = scanner.nextInt();
+            System.out.printf("Taylor result is: %.3f \n", TaylorSin.countTaylor(x, Math.pow(10, -k)));
+            System.out.printf("Actual result is: %.3f", Math.sin(x));
         } catch (InputMismatchException ex) {
             System.out.println("scanning went wrong");
-            x = 0;
-            k = 0;
         }
-        System.out.printf("Taylor result is: %.3f \n", TaylorSin.countTaylor(x, Math.pow(10, -k)));
-        System.out.printf("Actual result is: %.3f", Math.sin(x));
     }
 
     static class TaylorSin {
